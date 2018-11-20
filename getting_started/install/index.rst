@@ -34,3 +34,6 @@ also need to install it separately:
         <artifactId>gridgo-kafka</artifactId>
         <version>same as gridgo-connector-core</version>
     </dependency>
+
+A full list of supported connectors can be found on the
+`GitHub repository <https://github.com/gridgo/gridgo-connector/tree/master/connectors>`_
