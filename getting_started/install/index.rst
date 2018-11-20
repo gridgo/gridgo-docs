@@ -1,5 +1,5 @@
 Install Gridgo
---------------
+==============
 
 Gridgo can be easily installed using Maven. It is also split into
 several independent components that can be installed separately:
