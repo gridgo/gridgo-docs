@@ -1,4 +1,4 @@
-Install Gridgo
+Installing Gridgo
 ==============
 
 Gridgo requires Java 11 so you should make sure `JDK 11 <https://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ is installed. Gridgo is tested with ``Oracle JDK`` but any other JDK should be fine.
