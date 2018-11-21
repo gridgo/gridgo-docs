@@ -36,6 +36,14 @@ The main documentation for the site is organized into the following sections:
 
 .. toctree::
    :maxdepth: 1
+   :caption: Advanced topics
+   :name: sec-advanced
+
+   advanced/index
+
+
+.. toctree::
+   :maxdepth: 1
    :caption: Examples
    :name: sec-examples
 
