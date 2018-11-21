@@ -1,4 +1,4 @@
-Gridgo Official Documentation - *latest*
+Gridgo Official Documentation - *|version|*
 ========================================
 
 Welcome to the official documentation of Gridgo, a platform create distributed system
