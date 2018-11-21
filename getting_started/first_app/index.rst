@@ -4,7 +4,7 @@ Creating first application with Gridgo
 This article will help you creating your first Gridgo application. This simple application will do the following:
 
 - Create a new application context
-- Open a gateway and attach a HTTP server to it (using ``gridgo-vertx-http``)
+- Open a gateway and attach a HTTP server to it (using `gridgo-vertx-http`)
 - Start listening for incoming HTTP requests and return the same as responses.
 
 .. tip:: The full source code for this example can be found in the :ref:`Examples <sec-examples>` section
