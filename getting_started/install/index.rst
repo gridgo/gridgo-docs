@@ -1,7 +1,9 @@
 Install Gridgo
 ==============
 
-Gridgo can be easily installed using Maven. It is also split into
+Gridgo requires Java 11 so you should make sure `JDK 11 <https://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ is installed. Gridgo is tested with ``Oracle JDK`` but any other JDK should be fine.
+
+Gridgo itself can be easily installed using Maven. It is also split into
 several independent components that can be installed separately:
 
 **Install gridgo-core**
