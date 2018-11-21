@@ -28,7 +28,7 @@ Install this if you want to only work with the I/O abstraction layer (``Connecto
         <version>0.1.0</version>
     </dependency>
 
-.. note:: To work with a specific connector type (e.g ``gridgo-kafka``) you
+.. note:: To work with a specific connector type (e.g `gridgo-kafka`) you
           also need to install it separately:
 
 .. code-block:: xml
