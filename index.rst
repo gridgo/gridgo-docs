@@ -1,19 +1,14 @@
 Gridgo Official Documentation - *latest*
 ========================================
 
-Welcome to the official documentation of Gridgo, a platform create distributed system
-easier. We provides the manual, tutorials and examples on this documentation.
+Welcome to the official documentation of Gridgo, a platform to create distributed system easier. We provides the manual, tutorials and examples on this documentation.
 
-.. note:: All contributions are welcome. Make sure you read the `contribution
-          guideline <https://github.com/gridgo/gridgo/wiki/contribution-guideline>`_
-          before start making changes.
+.. note:: All contributions are welcome. Make sure you read the `contribution guideline                                                 
+          <https://github.com/gridgo/gridgo/wiki/contribution-guideline>`_ before start making changes.
 
-The table of contents below and in the sidebar should let you easily access the
-documentation for your topic of interest. You can also use the search function
-in the top left corner.
+The table of contents below and in the sidebar should let you easily access the documentation for your topic of interest. You can also use the search function in the top left corner.
 
-.. tip:: If you are new to Gridgo, please read the first section about basic
-         principles and terminologies first.
+.. tip:: If you are new to Gridgo, please read the first section about basic principles and terminologies first.
 
 The main documentation for the site is organized into the following sections:
 
