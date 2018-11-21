@@ -93,8 +93,8 @@ The `findGateway()` method will accept a String representing the Gateway name. T
 
 There are 5 different types of sending:
 
-- ``void send(Message)``: Send a message to the attached conectors and forget about it. You won't know if the transportation has been successful or not
-- ``Promise sendWithAck(Message)``: Send a message to the attached conectors with acknowledgement. You will know the status of the transportation, but don't know about the response.
-- ``Promise call(Message)``: Send a message to the attached conectors and get the response. This is called RPC mode. Some connectors might not support it.
-- ``void push(Message)``: Simply put the message into the incoming sink of the Gateway and make it available for Processors. This operation won't involve any I/O.
-- ``void callAndPush(Message)``: This is similar to `Promise call(Message)`, but the response is put into the incoming sink of the Gateway instead of returning to Processor. This will make your application logic cleaner and independent of I/O, at the cost of logic fragmentation. This is inspired by the LMAX architecture.
+- **void send(Message)**: Send a message to the attached conectors and forget about it. You won't know if the transportation has been successful or not
+- **Promise sendWithAck(Message)**: Send a message to the attached conectors with acknowledgement. You will know the status of the transportation, but don't know about the response.
+- **Promise call(Message)**: Send a message to the attached conectors and get the response. This is called RPC mode. Some connectors might not support it.
+- **void push(Message)**: Simply put the message into the incoming sink of the Gateway and make it available for Processors. This operation won't involve any I/O.
+- **void callAndPush(Message)**: This is similar to `Promise call(Message)`, but the response is put into the incoming sink of the Gateway instead of returning to Processor. This will make your application logic cleaner and independent of I/O, at the cost of logic fragmentation. This is inspired by the LMAX architecture.
