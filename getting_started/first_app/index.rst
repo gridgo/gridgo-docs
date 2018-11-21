@@ -1,5 +1,5 @@
-Creating first application with Gridgo
-======================================
+Creating first application
+==========================
 
 This article will help you creating your first Gridgo application. This simple application will do the following:
 
