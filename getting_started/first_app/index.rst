@@ -11,7 +11,8 @@ The entry-point of a Gridgo application is the ``GridgoContext``. A ``GridgoCont
 
 ``GridgoContext`` can be created using a ``GridgoContextBuilder``, which currently supports ``DefaultGridgoContextBuilder``
 
-.. code-block::java
+.. code-block:: java
+
     // create the context using default configuration
     var context = new DefaultGridgoContextBuilder().setName("application").build();
 
@@ -21,7 +22,8 @@ Gateways are asynchronous in nature, which all interactions are handled using Pr
 
 The following code will open a new gateway, attach an I/O connector to it and subscribe for incoming messages.
 
-.. code-block::java
+.. code-block:: java
+
     var gateway = context.openGateway("myGateway")
                          .attachConnector("vertx:http://127.0.0.1:8080") // attach a web server connector
                          .subscribe(this::handleMessages) // subscribe for incoming messages
@@ -31,7 +33,8 @@ More about Connector and available endpoints can be found `here <https://github.
 
 `handleMessages` is actually a implementation of ``Processor``, which will take 2 arguments: a ``RoutingContext`` containing information about the current request and the ``GridgoContext`` the request is associated with.
 
-.. code-block::java
+.. code-block:: java
+
     private void handleMessages(RoutingContext rc, GridgoContext gc) {
         var msg = rc.getMessage();
         var deferred = rc.getDeferred();
@@ -42,7 +45,8 @@ More about Connector and available endpoints can be found `here <https://github.
 
 After you have configured the context, you need to call its ``start()`` method, which will in turn starting gateways. If the attached connector supports a ``Consumer``, it will listen for incoming messages and route them to the matching Processors.
 
-.. code-block::java
+.. code-block:: java
+
     context.start();
 
     // Register a shutdown hook to stop the context
