@@ -7,7 +7,7 @@ This article will help you creating your first Gridgo application. This simple a
 - Open a gateway and attach a HTTP server to it (using `gridgo-vertx-http`)
 - Start listening for incoming HTTP requests and return the same as responses.
 
-.. tip:: The full source code for this example can be found in the :ref:`Examples <sec-examples>` section
+.. tip:: The full source code for this example can be found in the :doc:`/examples/index` section
 
 The entry-point of a Gridgo application is the ``GridgoContext``. A GridgoContext will act as a standalone component which will have its own configuration and be started/stopped independently regardless of where it's running. While a JVM process is a physical entity, a GridgoContext is a logical one, and in fact, you can have multiple instances of GridgoContext inside a single JVM process.
 
@@ -56,4 +56,4 @@ After you have configured the context, you need to call its ``start()`` method, 
 
 After you have run the application (e.g using a `public static void main(String[] args)` method), you can access the application in `<http://localhost:8080>`_
 
-Well done! You have created your first Gridgo application with just a few lines of code. More hand-on tutorials can be found at the :ref:`Tutorials <sec-tutorials>` section, or you can go to the next section for more advanced topics.
+Well done! You have created your first Gridgo application with just a few lines of code. More hand-on tutorials can be found at the :doc:`/tutorials/index` section, or you can go to the next section for more advanced topics.
