@@ -54,4 +54,4 @@ After you have configured the context, you need to call its ``start()`` method, 
     // Register a shutdown hook to stop the context
     Runtime.getRuntime().addShutdownHook(new Thread(context::stop));
 
-Well done! You have created your first Gridgo application with just a few lines of code. More hand-on tutorials can be found at the :ref:`Tutorials <sec-tutorials>` section.
+Well done! You have created your first Gridgo application with just a few lines of code. More hand-on tutorials can be found at the :ref:`Tutorials <sec-tutorials>` section, or you can go to the next section for more advanced topics.
