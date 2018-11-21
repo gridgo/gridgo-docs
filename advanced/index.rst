@@ -76,3 +76,25 @@ This is done using the `Deferred` object in `RoutingContext`
 
 .. note:: Only the first call to either `resolve()` or `reject()` will work.
           Subsequent calls will be ignored.
+
+Sending messages to gateways
+----------------------------
+
+Flows between Processors and Gateways are not one-way, most of the time. Often you will need to send messages to a remote endpoint via Gateway, e.g querying a database, or producing messages to Kafka brokers. To do so you must first obtain the Gateway instance, e.g using `GridgoContext`
+
+.. code-block:: java
+
+    context.findGateway("myGateway") // will return an Optional<Gateway>
+           .ifPresent(gateway -> {
+               // send message here
+           });
+
+The `findGateway()` method will accept a String representing the Gateway name. This is the same name you have used to open the gateway earlier.
+
+There are 5 different types of sending:
+
+- `void send(Message)`: Send a message to the attached conectors and forget about it. You won't know if the transportation has been successful or not
+- `Promise sendWithAck(Message)`: Send a message to the attached conectors with acknowledgement. You will know the status of the transportation, but don't know about the response.
+- `Promise call(Message)`: Send a message to the attached conectors and get the response. This is called RPC mode. Some connectors might not support it.
+- `void push(Message)`: Simply put the message into the incoming sink of the Gateway and make it available for Processors. This operation won't involve any I/O.
+- `void callAndPush(Message)`: This is similar to `Promise call(Message)`, but the response is put into the incoming sink of the Gateway instead of returning to Processor. This will make your application logic cleaner and independent of I/O, at the cost of logic fragmentation. This is inspired by the LMAX architecture.
