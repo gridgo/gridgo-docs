@@ -1,8 +1,8 @@
 Gridgo Official Documentation - *latest*
 ========================================
 
-Welcome to the official documentation of Gridgo. We provides the manual, tutorials
-and examples on this documentation.
+Welcome to the official documentation of Gridgo, a platform create distributed system
+easier. We provides the manual, tutorials and examples on this documentation.
 
 .. note:: All contributions are welcome. Make sure you read the `contribution
           guideline <https://github.com/gridgo/gridgo/wiki/contribution-guideline>`_
