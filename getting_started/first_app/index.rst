@@ -27,7 +27,7 @@ The following code will open a new gateway, attach an I/O connector to it and su
 .. code-block:: java
 
     var gateway = context.openGateway("myGateway")
-                         .attachConnector("vertx:http://127.0.0.1:8080") // attach a web server connector
+                         .attachConnector("vertx:http://127.0.0.1:8080/") // attach a web server connector
                          .subscribe(this::handleMessages) // subscribe for incoming messages
                          .finishSubscribing().get();
 
@@ -41,8 +41,8 @@ More about Connector and available endpoints can be found `here <https://github.
         var msg = rc.getMessage();
         var deferred = rc.getDeferred();
         
-        // using the same request as response
-        deferred.resolve(msg);
+        // using the same request body as response
+        deferred.resolve(Message.newDefault(Payload.newDefault(msg.getPayload.getBody())));
     }
 
 After you have configured the context, you need to call its ``start()`` method, which will in turn starting gateways. If the attached connector supports a ``Consumer``, it will listen for incoming messages and route them to the matching Processors.
