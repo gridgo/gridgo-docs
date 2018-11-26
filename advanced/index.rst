@@ -15,9 +15,17 @@ to create the bean instances and register them inside the Registry.
 
 .. code-block:: java
 
-    var mongoClient = MongoClient.create(); // create the MongoClient bean
-    var myRegistry = new SimpleRegistry().register("mongoBean", mongoClient); // register the bean
+    // create the MongoClient bean
+    var mongoClient = MongoClient.create(); 
+
+    // register the bean
+    var myRegistry = new SimpleRegistry().register("mongoBean", mongoClient); 
+    
+    // create the context with the custom registry
     var context = new DefaultGridgoContextBuilder().setName("application").setRegistry(myRegistry).build();
+    
+    // later on you can look up the bean using the provided name
+    mongoClient = context.getRegistry().lookup("mongoBean", MongoClient.class);
 
 .. note:: It's currently not supported to register bean instances after you have built the 
           GridgoContext, so make sure you have registered all the beans you need.
