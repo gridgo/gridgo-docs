@@ -74,6 +74,7 @@ The main documentation for the site is organized into the following sections:
    :caption: References
    :name: sec-class-ref
 
+   Gridgo Connectors <https://github.com/gridgo/gridgo-connector/tree/master/connectors>
    Gridgo Core Javadoc <http://javadoc.io/doc/io.gridgo/gridgo-core/0.1.2>
    Gridgo Connector Core Javadoc <http://javadoc.io/doc/io.gridgo/gridgo-connector-core/0.1.0>
 
