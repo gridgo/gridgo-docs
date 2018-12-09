@@ -26,9 +26,12 @@ to create the bean instances and register them inside the Registry.
     
     // later on you can look up the bean using the provided name
     mongoClient = context.getRegistry().lookup("mongoBean", MongoClient.class);
+    
+Another use case of Registry is to store some settings, which can be required for
+application to run. Since 0.2.0 you can also substitute the settings value in a 
+connector endpoint.
 
-.. note:: It's currently not supported to register bean instances after you have built the 
-          GridgoContext, so make sure you have registered all the beans you need.
+.. note:: Since 0.2.0, you can register new entry after creating the Registry.
 
 Configuring an execution policy
 ------------------------------
