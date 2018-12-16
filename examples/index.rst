@@ -15,3 +15,16 @@ gridgo-example-mongodb-vertx
     server running at port 27017
     
     Link: `<https://github.com/gridgo/gridgo/tree/master/examples/gridgo-example-mongodb-vertx>`_
+
+gridgo-example-mongodb-vertx
+    This application will start a web server at port 8088, listen for incoming HTTP 
+    requests and response with a whole collection of MongoDB. It requires a MongoDB
+    server running at port 27017
+    
+    Link: `<https://github.com/gridgo/gridgo/tree/master/examples/gridgo-example-mongodb-vertx>`_
+
+gridgo-example-tik-tac-toe
+    This application will create a simple tik-tac-toe game, with a websocket & HTTP gateway, and 
+    some support gateway to handle game logic.
+    
+    Link: `<https://github.com/gridgo/gridgo/tree/develop/examples/gridgo-example-tik-tac-toe>`_
