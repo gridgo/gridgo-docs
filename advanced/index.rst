@@ -1,12 +1,15 @@
 Gateway Advanced
 ================
 
-   :ref:`multiple_connectors/index`
-   :ref:`return_response/index`
-   :ref:`config_exec_policy/index`
+:doc:`multiple_connectors/index`
+
+:doc:`return_response/index`
+
+:doc:`config_exec_policy/index`
 
 Context Advanced
 ================
 
-   :ref:`custom_registry/index`
-   :ref:`bridge_switch/index`
+:doc:`custom_registry/index`
+
+:doc:`bridge_switch/index`
