@@ -1,6 +1,3 @@
-Advanced topics
-===============
-
 This article will discuss multiple advanced topics of each Gridgo components: 
 ``Gateway``, ``Connector`` and ``GridgoContext``
 
