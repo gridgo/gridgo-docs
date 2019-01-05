@@ -20,5 +20,6 @@ This section will discuss about advanced topics when using GridgoContext
    :maxdepth: 1
    :name: sec-context-adv
    
+   configuration/index
    custom_registry/index
    bridge_switch/index
