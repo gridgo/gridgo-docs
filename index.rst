@@ -30,7 +30,7 @@ The main documentation for the site is organized into the following sections:
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Advanced topics
    :name: sec-advanced
 
