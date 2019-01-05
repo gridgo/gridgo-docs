@@ -1,23 +1,12 @@
-Advanced topics
-===============
+Gateway Advanced
+================
 
-This article will discuss multiple advanced topics of each Gridgo components: 
-``Gateway``, ``Connector`` and ``GridgoContext``
+   ref:multiple_connectors/index
+   ref:return_response/index
+   ref:config_exec_policy/index
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Gateway Advanced
-   :name: sec-gateway-adv
+Context Advanced
+================
 
-   multiple_connectors/index
-   return_response/index
-   config_exec_policy/index
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Context Advanced
-   :name: sec-context-adv
-
-   custom_registry/index
-   bridge_switch/index
-
+   ref:custom_registry/index
+   ref:bridge_switch/index
