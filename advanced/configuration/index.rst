@@ -22,11 +22,11 @@ You can also pass a type to the `lookup` method, so result will be automatically
 
 Some of the supported registries are:
 
-- SimpleRegistry: a registry backed by a HashMap
-- PropertiesFileRegistry: a registry backed by a properties file
-- SystemEnvRegistry: a registry which corresponds to the system environment variables
-- SystemPropertyRegistry: a registry which corresponds to the Java properties (e.g when using `-D` option)
-- MultiSourceRegistry: a registry which contains other registries, so you can use multiple registries as if it was a single one.
+- `SimpleRegistry`: a registry backed by a HashMap
+- `PropertiesFileRegistry`: a registry backed by a properties file
+- `SystemEnvRegistry`: a registry which corresponds to the system environment variables
+- `SystemPropertyRegistry`: a registry which corresponds to the Java properties (e.g when using `-D` option)
+- `MultiSourceRegistry`: a registry which contains other registries, so you can use multiple registries as if it was a single one.
 
 There are some registries supported in `gridgo-extras`:
 
