@@ -1,15 +1,16 @@
 Gateway Advanced
 ================
 
-:doc:`multiple_connectors/index`
+This section will discuss about advanced topics when using Gateway
 
-:doc:`return_response/index`
-
-:doc:`config_exec_policy/index`
+- :doc:`multiple_connectors/index`
+- :doc:`return_response/index`
+- :doc:`config_exec_policy/index`
 
 Context Advanced
 ================
 
-:doc:`custom_registry/index`
+This section will discuss about advanced topics when using GridgoContext
 
-:doc:`bridge_switch/index`
+- :doc:`custom_registry/index`
+- :doc:`bridge_switch/index`
