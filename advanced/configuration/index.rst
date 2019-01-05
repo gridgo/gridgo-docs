@@ -19,6 +19,13 @@ You can also pass a type to the `lookup` method, so result will be automatically
 .. code-block:: java
 
     var numbers = registry.lookup('numbers', int[].class);
+    
+And substitute placeholders in strings using values from Registry:
+
+.. code-block:: java
+
+    var someString = "mongodb://${mongodb.host}:${mongodb.port}";
+    var parsedString = registry.substitute(someString);
 
 Some of the supported registries are:
 
