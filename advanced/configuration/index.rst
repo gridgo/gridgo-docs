@@ -65,4 +65,4 @@ Object-based configurations in Gridgo are called `Configurator`. They are a bit 
     
 The configurator needs more work than Registry because it can support hot-reload and remote configuration (e.g using a Database or Zookeeper)
 
-.. tip:: Most configurators are extended from `ReplayEventDispatcher`, that means you can subscribe whenever you want, all              events will be replayed the first time you subscribe.
+.. tip:: Most configurators are extended from `ReplayEventDispatcher`, that means you can subscribe whenever you want, all              events will be replayed every time you subscribe.
