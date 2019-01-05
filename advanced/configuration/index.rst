@@ -37,8 +37,8 @@ Some of the supported registries are:
 
 There are some registries supported in `gridgo-extras`:
 
-- SpringRegistry: a registry which is backed by Spring `ApplicationContext`
-- TypeSafeRegistry: a registry which is backed by typesafe/config
+- `SpringRegistry`: a registry which is backed by Spring `ApplicationContext`
+- `TypeSafeRegistry`: a registry which is backed by typesafe/config
 
 Object-based configuration
 --------------------------
