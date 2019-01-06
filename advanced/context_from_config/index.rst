@@ -18,7 +18,7 @@ Following are an example of a conf file:
 .. code-block:: hocon
 
     # the application name
-    applicationName = "promo-rules-monitoring"
+    applicationName = "helloworld"
 
     # list of gateways
     gateways {
@@ -50,6 +50,32 @@ Following are an example of a conf file:
     
     # list of components
     components += "bean:myComponent"
+
+This is the same configuration using YAML
+
+.. code-block:: yaml
+
+    applicationName: "helloworld"
+    
+    gateways:
+        test:
+            subscribers:
+                - "class:io.gridgo.example.TestProcessor"
+        another:
+            subscribers:
+                - processor: "class:io.gridgo.example.AnotherProcessor"
+                  executionStrategy: "bean:myExecutionStrategy"
+                  condition: "payload.body.data not empty"
+        alsoAnother:
+            autoStart: false
+            connectors:
+                - "kafka:topic1?brokers=localhost:9092"
+                - endpoint: "vertx:http://localhost:8080"
+                  contextBuilder: "bean:myConnectorContextBuilder"
+            subscribers:
+                - "class:io.gridgo.example.AlsoAnotherProcessor"
+    components:
+        - "bean:myComponent"
 
 As you can see the syntax very flexible: for `subscribers`, `connectors` you can use either String or Object. The syntax is based on HOCON format, a superset of JSON, which is optimized for human.
 
