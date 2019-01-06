@@ -31,6 +31,7 @@ Following are an example of a conf file:
         another.subscribers += {
             processor = "class:io.gridgo.example.AnotherProcessor"
             executionStrategy = "bean:myExecutionStrategy"
+            condition = "payload.body.data not empty"
         }
         
         # add another gateway with 2 connectors and autoStart false
