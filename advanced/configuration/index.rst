@@ -11,14 +11,14 @@ Key-value configurations in Gridgo are called `Registry`. A registry stores a ma
 .. code-block:: java
 
     var registry = new SimpleRegistry();
-    registry.register('numbers', new int[] {1, 2, 3});
-    var numbers = registry.lookup('numbers');
+    registry.register("numbers", new int[] {1, 2, 3});
+    var numbers = registry.lookup("numbers");
     
 You can also pass a type to the `lookup` method, so result will be automatically casted the specified type:
 
 .. code-block:: java
 
-    var numbers = registry.lookup('numbers', int[].class);
+    var numbers = registry.lookup("numbers", int[].class);
     
 And substitute placeholders in strings using values from Registry:
 
