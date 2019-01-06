@@ -15,7 +15,7 @@ It is very convenient to create GridgoContext using configuration, whether it is
                                                   
 Following are an example of a conf file:
 
-.. code-block:: json
+.. code-block:: hocon
 
     # the application name
     applicationName = "promo-rules-monitoring"
