@@ -21,5 +21,6 @@ This section will discuss about advanced topics when using GridgoContext
    :name: sec-context-adv
    
    configuration/index
+   context_from_config/index
    custom_registry/index
    bridge_switch/index
