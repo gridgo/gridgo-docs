@@ -57,7 +57,7 @@ Object-based configurations in Gridgo are called `Configurator`. They are a bit 
       else if (event.isReloaded())
         System.out.println("Event reloaded: " + event.asLoaded().getConfigObject());
       else if (event.isFailed())
-        System.out.println(event.asFailed().getCause().printStackTrace());
+        event.asFailed().getCause().printStackTrace();
     });
     
     // start the configurator
