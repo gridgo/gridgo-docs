@@ -8,7 +8,7 @@ Transactions are done through `io.gridgo.connector.support.transaction.Transacti
 Creating and processing transactions
 ------------------------------------
 
-There are several ways to create and process transactions. All of the following code are valid and are exactly the same.
+There are several ways to create and process transactions. All of the following code are valid and are exactly the same. `createTransaction` and `withTransaction` methods are provided by `TransactionProcessor`
 
 1. Create, commit and rollback transaction manually
 
