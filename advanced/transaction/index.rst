@@ -29,7 +29,7 @@ There are several ways to create and process transactions. All of the following 
     
     // create transaction automatically but still commit/rollback manually
     withTransaction(gateway, transaction -> {
-        transaction.callAny('insert into some_table values(..)')
+        transaction.callAny("insert into some_table values(..)")
                    .pipeDone(result -> doSomethingWithResult())
                    .done(result -> transaction.commit())
                    .fail(ex -> transaction.rollback())
