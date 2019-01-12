@@ -8,8 +8,9 @@ Transactions are done through `io.gridgo.connector.support.transaction.Transacti
 Creating and processing transactions
 ------------------------------------
 
-There are several ways to create and process transactions. All of the following code are valid and are exactly the same:
+There are several ways to create and process transactions. All of the following code are valid and are exactly the same.
 
+1. Create, commit and rollback transaction manually
 
 .. code-block:: java
 
@@ -22,6 +23,8 @@ There are several ways to create and process transactions. All of the following 
                .done(result -> transaction.commit())
                .fail(ex -> transaction.rollback());
 
+2. Create transaction automatically but commit/rollback manually
+
 .. code-block:: java 
     
     // create transaction automatically but still commit/rollback manually
@@ -32,6 +35,7 @@ There are several ways to create and process transactions. All of the following 
                    .fail(ex -> transaction.rollback())
     });    
 
+3. Create transaction manually and use provided deferred to commit/rollback
 
 .. code-block:: java 
     
@@ -44,6 +48,7 @@ There are several ways to create and process transactions. All of the following 
                    .forward(deferred);
     });    
 
+4. Create transaction automatically and return a promise to commit/rollback
 
 .. code-block:: java 
     
