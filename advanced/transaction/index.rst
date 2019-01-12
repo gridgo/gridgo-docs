@@ -18,17 +18,10 @@ There are several ways to create and process transactions. All of the following 
     var transaction = createTransaction(gateway);
     
     // use the Transaction object to query and commit/rollback manually
-    configurator.subscribe(event -> {
-      if (event.isLoaded())
-        System.out.println("Event loaded: " + event.asLoaded().getConfigObject());
-      else if (event.isReloaded())
-        System.out.println("Event reloaded: " + event.asLoaded().getConfigObject());
-      else if (event.isFailed())
-        event.asFailed().getCause().printStackTrace();
-    });
-    
-    // start the configurator
-    configurator.start();
+    transaction.callAny('insert into some_table values(..)')
+        .pipeDone(result -> doSomethingWithResult())
+        .done(result -> transaction.commit())
+        .fail(ex -> transaction.rollback());
 
 .. code-block:: java
 
