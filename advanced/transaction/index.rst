@@ -18,14 +18,7 @@ There are several ways to create and process transactions. All of the following 
     var transaction = createTransaction(gateway);
     
     // use the Transaction object to query and commit/rollback manually
-
-.. code-block:: java
-
-    // create a transaction manually
-    var transaction = createTransaction(gateway);
-    
-    // use the Transaction object to query and commit/rollback manually
-    transaction.callAny('insert into some_table values(..)')
+    transaction.callAny("insert into some_table values(..)")
                .pipeDone(result -> doSomethingWithResult())
                .done(result -> transaction.commit())
                .fail(ex -> transaction.rollback());
@@ -50,7 +43,7 @@ There are several ways to create and process transactions. All of the following 
     // the transaction will be committed when deferred is resolved, and rolled back
     // when it is rejected
     withTransaction(gateway, (transaction, deferred) -> {
-        transaction.callAny('insert into some_table values(..)')
+        transaction.callAny("insert into some_table values(..)")
                    .pipeDone(result -> doSomethingWithResult())
                    .forward(deferred);
     });    
@@ -62,7 +55,7 @@ There are several ways to create and process transactions. All of the following 
     // create transaction automatically and return a promise to let Gridgo knows
     // when to commit/rollback the transaction. 
     withTransaction(gateway, transaction -> {
-        return transaction.callAny('insert into some_table values(..)')
+        return transaction.callAny("insert into some_table values(..)")
                           .pipeDone(result -> doSomethingWithResult());
     });    
 
