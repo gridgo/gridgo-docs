@@ -18,10 +18,6 @@ There are several ways to create and process transactions. All of the following 
     var transaction = createTransaction(gateway);
     
     // use the Transaction object to query and commit/rollback manually
-    transaction.callAny('insert into some_table values(..)');
-    //    .pipeDone(result -> doSomethingWithResult())
-    //    .done(result -> transaction.commit())
-    //    .fail(ex -> transaction.rollback());
 
 .. code-block:: java
 
