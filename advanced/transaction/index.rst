@@ -8,7 +8,7 @@ Transactions are done through `io.gridgo.connector.support.transaction.Transacti
 There are several ways to create and process transactions. All of the following code are valid and are exactly the same:
 
 .. code-block:: java 
-
+    
     // create a transaction manually
     var transaction  = createTransaction(gateway);
     
@@ -19,7 +19,7 @@ There are several ways to create and process transactions. All of the following 
                .fail(ex -> transaction.rollback());
 
 .. code-block:: java 
-
+    
     // create transaction automatically but still commit/rollback manually
     withTransaction(gateway, transaction -> {
         transaction.callAny('insert into some_table values(..)')
@@ -30,7 +30,7 @@ There are several ways to create and process transactions. All of the following 
 
 
 .. code-block:: java 
-
+    
     // create transaction automatically and use provided deferred to commit/rollback
     // the transaction will be committed when deferred is resolved, and rolled back
     // when it is rejected
@@ -42,7 +42,7 @@ There are several ways to create and process transactions. All of the following 
 
 
 .. code-block:: java 
-
+    
     // create transaction automatically and return a promise to let Gridgo knows
     // when to commit/rollback the transaction. 
     withTransaction(gateway, transaction -> {
