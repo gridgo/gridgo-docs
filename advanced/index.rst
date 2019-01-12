@@ -10,6 +10,7 @@ This section will discuss about advanced topics when using Gateway
    multiple_connectors/index
    return_response/index
    config_exec_policy/index
+   transaction/index
 
 Context Advanced
 ================
