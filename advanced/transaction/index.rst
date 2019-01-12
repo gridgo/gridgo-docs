@@ -8,28 +8,11 @@ Transactions are done through `io.gridgo.connector.support.transaction.Transacti
 Creating and processing transactions
 ------------------------------------
 
-.. code-block:: java
-
-    // create an instance of configurator using TypeSafe
-    var configurator = TypeSafeConfigurator.ofResource("application.conf");
-    
-    // register for configuration event
-    configurator.subscribe(event -> {
-      if (event.isLoaded())
-        System.out.println("Event loaded: " + event.asLoaded().getConfigObject());
-      else if (event.isReloaded())
-        System.out.println("Event reloaded: " + event.asLoaded().getConfigObject());
-      else if (event.isFailed())
-        event.asFailed().getCause().printStackTrace();
-    });
-    
-    // start the configurator
-    configurator.start();
-
 There are several ways to create and process transactions. All of the following code are valid and are exactly the same:
 
-.. code-block:: java 
-    
+
+.. code-block:: java
+
     // create a transaction manually
     var transaction  = createTransaction(gateway);
     
