@@ -14,14 +14,13 @@ There are several ways to create and process transactions. All of the following 
 
 .. code-block:: java
 
-    // create a transaction manually
-    var transaction = createTransaction(gateway);
-    
-    // use the Transaction object to query and commit/rollback manually
-    transaction.callAny("insert into some_table values(..)")
-               .pipeDone(result -> doSomethingWithResult())
-               .done(result -> transaction.commit())
-               .fail(ex -> transaction.rollback());
+    createTransaction(gateway).done(transaction -> {
+        // use the Transaction object to query and commit/rollback manually
+        transaction.callAny("insert into some_table values(..)")
+                   .pipeDone(result -> doSomethingWithResult())
+                   .done(result -> transaction.commit())
+                   .fail(ex -> transaction.rollback());
+    }).fail(ex -> logger.error("Cannot create transaction", ex));
 
 2. Create transaction automatically but commit/rollback manually
 
@@ -33,7 +32,7 @@ There are several ways to create and process transactions. All of the following 
                    .pipeDone(result -> doSomethingWithResult())
                    .done(result -> transaction.commit())
                    .fail(ex -> transaction.rollback())
-    });    
+    }).fail(ex -> logger.error("Cannot create transaction", ex));    
 
 3. Create transaction manually and use provided deferred to commit/rollback
 
@@ -46,7 +45,7 @@ There are several ways to create and process transactions. All of the following 
         transaction.callAny("insert into some_table values(..)")
                    .pipeDone(result -> doSomethingWithResult())
                    .forward(deferred);
-    });    
+    }).fail(ex -> logger.error("Cannot create transaction", ex));    
 
 4. Create transaction automatically and return a promise to commit/rollback
 
@@ -57,5 +56,5 @@ There are several ways to create and process transactions. All of the following 
     withTransaction(gateway, transaction -> {
         return transaction.callAny("insert into some_table values(..)")
                           .pipeDone(result -> doSomethingWithResult());
-    });    
+    }).fail(ex -> logger.error("Cannot create transaction", ex));    
 
