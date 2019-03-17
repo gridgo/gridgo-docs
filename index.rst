@@ -27,6 +27,7 @@ The main documentation for the site is organized into the following sections:
 
    getting_started/install/index
    getting_started/first_app/index
+   getting_started/bean/index
 
 
 .. toctree::
