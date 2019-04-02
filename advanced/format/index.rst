@@ -1,9 +1,5 @@
-Advanced serialization format
-=============================
-
-
 Pluggable serialization format
-------------------------------
+=============================
 
 By design, every serialization format defined by a `BSerializer`, include all the build-in kinds.
 
@@ -22,16 +18,17 @@ or
     BFactory.DEFAULT.getSerializerRegistry(<name>, <BSerializer instance>);
 
 Default binary serializer
--------------------------
+=========================
+
 Bean using a system property named ``gridgo.bean.serializer.binary.default`` to take default binary serializer name, if it's unset, ``msgpack`` will be used.
 
 Default serializer will be used in ``toBytes()``, ``writeBytes(...)`` and ``fromBytes(...)`` methods.
 
 Schema and schema-less format
-----------------------------
+=============================
 
 Schema
-~~~~~~
+------
 There are a lot of binary serialization format which based on `schema` - generally understand as a value object.
 
 To serialize an object as in schema serialization format, object's type must be registered with serializer.
@@ -41,14 +38,14 @@ In case multi schemas used in a single serializer, it should be prepended by a `
 There are 2 abstract interfaces for `schema serialization`: ``io.gridgo.bean.serialization.MultiSchemaSerializer<S>`` and ``io.gridgo.bean.serialization.SingleSchemaSerializer<S>``
 
 Schema-less
-~~~~~~~~~~
+-----------
 `JSON`, `XML`, `msgpack` mentioned as built-in format are schema-less, mean it doesn't need to pre-define the schema class.
 
 Pre-support serialization
--------------------------
+=============================
 
 Gson
-~~~~
+----
 
 By default, `json` serializer using ``json-smart`` lib, but if you have your own reason to use ``gson``, you can do it by add maven dependency:
 
@@ -61,7 +58,7 @@ By default, `json` serializer using ``json-smart`` lib, but if you have your own
     </dependency>
 
 Protobuf
-~~~~~~~~
+--------
 Protobuf is a popularly serialization format. Gridgo-bean already support it by a dependency:
 
 .. code::
@@ -101,10 +98,11 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
     assertEquals(p, p2);
 
 where ``Person`` is a protobuf generated class.
+
 *** you must register the schema class before use `protobuf` serialization format
 
 Avro
-~~~~
+----
 
 Like protobuf, Avro also widely used serialization format. To use it, add below lines to your pom.xml:
 
@@ -149,4 +147,5 @@ Avro serialzier also support 2 modes:
     assertEquals(p, p2);
 
 where ``Person`` is a avro generated class.
+
 *** you must register the schema class before use `avro` serialization format

@@ -85,4 +85,4 @@ Built-in
 
 - Json: can be used by ``BElement.toJson()`` and ``BElement.fromJson(...)``
 - XML: can be used by ``BElement.toXml()`` and ``BElement.fromXml(...)``
-- Msgpack: can be use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)``
+- Msgpack: can be use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)`` (`msgpack` set as default binary serializer if the system property name `gridgo.bean.serializer.binary.default` is unset)
