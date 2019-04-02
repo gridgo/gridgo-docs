@@ -1,13 +1,13 @@
 Bean Basics
 ===========
 
-overview
+Overview
 --------
 
 Beans are the abstract data structure of Gridgo aim to transparent data format and make easier to sending via network.
 Bean's structure is json-like, which support reference in additional.
 
-hierachy
+Hierachy
 --------
 
 .. code::
@@ -36,21 +36,26 @@ hierachy
                         |                      |                                        |                       |
                         +-- ImmutableBArray ---+---------------------------- WrappedImmutableBArray        MutableBArray
 
-definition
+Definition
 ----------
 
-BElement is the top of all bean type.
-BValue wrap any value which is primitive: Boolean, Character, String, Number (byte, short, int, long, float, double, BigInteger, BigDecimal), raw binary (byte[]). Specially, BValue can convert any primitive type to any other.
-BContainer define any kind of BElement which can contain any other BElement.
-BObject define a key-value data structure
-BArray define a sequence data structure
+BElement 
+    is the top of all bean type.
+BValue 
+    wrap any value which is primitive: `Boolean`, `Character`, `String`, `Number` (byte, short, int, long, float, double, BigInteger, BigDecimal), `raw binary` (byte[]). Specially, BValue can convert any primitive type to any other.
+Container 
+    define any kind of BElement which can contain any other BElement.
+BObject 
+    define a key-value data structure
+BArray 
+    define a sequence data structure
 
-usage
+Usage
 -----
 
 Using static methods define in top interface to create correlative instance:
 
-mutable instances
+Mutable instances
 ~~~~~~~~~~~~~~~~~
 
 - BReference.of(data): create a mutable instance of BReference
@@ -60,7 +65,7 @@ mutable instances
 
 in case you don't know which type of data want to convert to BElement, use: BElement.ofAny(data)
 
-immutable instances
+Immutable instances
 ~~~~~~~~~~~~~~~~~~~
 
 - BObject.wrap(map): wrap the input map in a WrappedImmutableBObject
@@ -68,19 +73,19 @@ immutable instances
 
 In case you don't know which kind of data which want to wrap, use: BElement.wrapAny(data)
 
-serialization
+Serialization
 -------------
 
 BElement support multi kind of data serialization:
 
-build-in
+Built-in
 ~~~~~~~~
 
 - Json: can be used by `BElement.toJson()` and `BElement.fromJson(...)`
 - XML: can be used by `BElement.toXml()` and `BElement.fromXml(...)`
 - Msgpack: canbe use by `BElement.toBytes()` and `BElement.fromBytes(...)`
 
-pluggable
+Pluggable
 ~~~~~~~~~
 
 By design, every serialization format defined by a BSerializer, include above build-in kinds.
