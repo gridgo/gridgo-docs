@@ -67,6 +67,8 @@ By default, `json` serializer using ``json-smart`` lib, but if you have your own
         <version>x.x.x</version>
     </dependency>
 
+Then, you can serialize using ``gson`` by calling: ``BElement.toBytes(`gson`);``
+
 Protobuf
 --------
 Protobuf is a popularly serialization format. Gridgo-bean already support it by a dependency:
