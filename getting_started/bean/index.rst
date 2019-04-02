@@ -4,7 +4,7 @@ Bean Basics
 Beans are the abstract data structure of Gridgo aim to transparent data format and make easier to sending via network.
 
 The hierachy as below:
-
+```
     BElement ------------------------------------------------------ AbstractBElement
         |                                                                  |
         |                                                    +-------------+------------+
@@ -28,3 +28,4 @@ The hierachy as below:
                         +-- WrappedBArray -----+                                        +-----------+-----------+
                         |                      |                                        |                       |
                         +-- ImmutableBArray ---+---------------------------- WrappedImmutableBArray        MutableBArray
+```
