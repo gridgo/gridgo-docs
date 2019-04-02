@@ -32,7 +32,7 @@ Bean's structure is json-like, which support reference in additional.
                         +-- ImmutableBArray ---+---------------------------- WrappedImmutableBArray        MutableBArray
 ```
 
-# define
+# definition
 BElement is the top of all bean type.
 BValue wrap any value which is primitive: Boolean, Character, String, Number (byte, short, int, long, float, double, BigInteger, BigDecimal), raw binary (byte[]). Specially, BValue can convert any primitive type to any other.
 BContainer define any kind of BElement which can contain any other BElement.
