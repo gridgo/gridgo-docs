@@ -158,7 +158,7 @@ where ``Person`` is a avro generated class.
 
 Write out binary
 ======================
-To work with I/O, data should be write to an output stream. There are 2 ways to do that:
+To work with I/O, data should be written to an output stream. There are 2 ways to do that:
 
 1. convert to byte[] using ``BElement.toBytes()`` then append that bytes to output stream.
 2. write directly to output stream using ``BElement.writeBytes(outputStream)``.
