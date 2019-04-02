@@ -108,6 +108,7 @@ Avro serialzier also support 2 modes:
 
 - Single schema:
 .. code-block:: java
+
     AvroSingleSchemaSerializer avroSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(AvroSingleSchemaSerializer.NAME);
     avroSerializer.setSchema(Person.class);
 
@@ -122,6 +123,7 @@ Avro serialzier also support 2 modes:
 
 - Multi schema:
 .. code-block:: java
+
     AvroMultiSchemaSerializer avroSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(AvroMultiSchemaSerializer.NAME);
     avroSerializer.registerSchema(Person.class, 1);
 
