@@ -81,7 +81,7 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
         <version>x.x.x</version>
     </dependency>
 
-`gridgo-bean-protobuf support protobuf in 2 mode:
+Protobuf serializer support 2 modes:
 
 - Single schema:
 .. code-block:: java
@@ -130,7 +130,7 @@ Like protobuf, Avro is also a widely-use serialization format. To use it, add be
         <version>x.x.x</version>
     </dependency>
 
-Avro serialzier also support 2 modes:
+Avro serializier also support 2 modes:
 
 - Single schema:
 .. code-block:: java
