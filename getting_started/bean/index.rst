@@ -76,9 +76,9 @@ BElement support multi kind of data serialization:
 build-in
 ~~~~~~~~
 
-- Json: can be used by BElement.toJson() and BElement.fromJson(...).
-- XML: can be used by BElement.toXml() and BElement.fromXml(...).
-- Msgpack: canbe use by BElement.toBytes() and BElement.fromBytes(...)
+- Json: can be used by `BElement.toJson()` and `BElement.fromJson(...)`
+- XML: can be used by `BElement.toXml()` and `BElement.fromXml(...)`
+- Msgpack: canbe use by `BElement.toBytes()` and `BElement.fromBytes(...)`
 
 pluggable
 ~~~~~~~~~
