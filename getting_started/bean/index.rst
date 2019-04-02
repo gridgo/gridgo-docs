@@ -41,14 +41,16 @@ Definition
 
 BElement
     is the top of all bean type.
+BReference
+    wrap any object as a reference.
 BValue
     wrap any value which is primitive: `Boolean`, `Character`, `String`, `Number` (byte, short, int, long, float, double, BigInteger, BigDecimal), `raw binary` (byte[]). Specially, BValue can convert any primitive type to any other.
 BContainer
-    define any kind of BElement which can contain any other BElement.
+    define a kind of BElement which can contain any other BElement.
 BObject
-    define a key-value data structure
+    define a key-value data structure.
 BArray
-    define a sequence data structure
+    define a sequence data structure.
 
 Usage
 -----
@@ -83,4 +85,4 @@ Built-in
 
 - Json: can be used by ``BElement.toJson()`` and ``BElement.fromJson(...)``
 - XML: can be used by ``BElement.toXml()`` and ``BElement.fromXml(...)``
-- Msgpack: canbe use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)``
+- Msgpack: can be use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)``

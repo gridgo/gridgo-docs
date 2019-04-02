@@ -27,10 +27,12 @@ Schema and schema-less format
 Schema
 ~~~~~~
 There are a lot of binary serialization format which based on `schema` - generally understand as a value object.
+
 To serialize an object as in schema serialization format, object's type must be registered with serializer.
+
 In case multi schemas used in a single serializer, it should be prepended by a `type` header (commonly using 4 bytes integer);
 
-There are 2 abstract classes for `schema serialization`: ``io.gridgo.bean.serialization.AbstractMultiSchemaSerializer<S>`` and ``io.gridgo.bean.serialization.AbstractSingleSchemaSerializer<S>``
+There are 2 abstract interfaces for `schema serialization`: ``io.gridgo.bean.serialization.MultiSchemaSerializer<S>`` and ``io.gridgo.bean.serialization.SingleSchemaSerializer<S>``
 
 Schema-less
 ~~~~~~~~~~
