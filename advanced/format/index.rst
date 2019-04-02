@@ -4,7 +4,7 @@ By default, all BElement created by default static methods ``of[...]()`` from BE
 
 To create a BElement which is thread-safe, use ``BObject.withHolder(<holder_map>)`` or ``BArray.withHolder(<holder_list>)``. Where input value should be thread-safe.
 
-Pluggable serialization format
+Pluggable serialization
 =============================
 
 By design, every serialization format defined by a `BSerializer`, include all the build-in kinds.
@@ -30,7 +30,7 @@ Bean using a system property named ``gridgo.bean.serializer.binary.default`` to 
 
 Default serializer will be used in ``toBytes()``, ``writeBytes(...)`` and ``fromBytes(...)`` methods.
 
-Schema and schema-less format
+Schema and schema-less
 =============================
 
 Schema
@@ -105,12 +105,12 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
 
 where ``Person`` is a protobuf generated class.
 
-*** you must register the schema class before use `protobuf` serialization format
+** you must register the schema class before use `protobuf` serialization format
 
 Avro
 ----
 
-Like protobuf, Avro also widely used serialization format. To use it, add below lines to your pom.xml:
+Like protobuf, Avro is also a widely-use serialization format. To use it, add below lines to your pom.xml:
 
 .. code::
 
@@ -154,4 +154,13 @@ Avro serialzier also support 2 modes:
 
 where ``Person`` is a avro generated class.
 
-*** you must register the schema class before use `avro` serialization format
+** you must register the schema class before use `avro` serialization format
+
+Write out binary
+======================
+To work with I/O, data should be write to an output stream. There are 2 ways to do that:
+
+1. convert to byte[] using ``BElement.toBytes()`` then append that bytes to output stream.
+2. write directly to output stream using ``BElement.writeBytes(outputStream)``.
+
+The second way is highly recommended because it save 1 times mem-copying and will make your code faster.
