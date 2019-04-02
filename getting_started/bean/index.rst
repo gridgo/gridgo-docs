@@ -10,7 +10,7 @@ Bean's structure is json-like, which support reference in additional.
 hierachy
 --------
 
-..code::
+.. code::
 
     BElement ------------------------------------------------------ AbstractBElement
         |                                                                  |
