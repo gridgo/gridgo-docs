@@ -2,10 +2,10 @@ Advanced serialization format
 =============================
 
 
-Pluggable
-~~~~~~~~~
+Pluggable serialization format
+------------------------------
 
-By design, every serialization format defined by a BSerializer`, include all the build-in kinds.
+By design, every serialization format defined by a `BSerializer`, include all the build-in kinds.
 
 For example, by a global way you can use: ``BElement.fromBytes(bytes, "json")`` where "json" indicate the `BSerializer` instance named "json" will be used to deserialize bytes
 
