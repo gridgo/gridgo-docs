@@ -115,7 +115,7 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
 
 where ``Person`` is a protobuf generated class.
 
-** NOTE: you must register the schema class before use `protobuf` serialization format
+** NOTE: you must register the schema class before use `protobuf` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
 
 Avro
 ----
@@ -162,7 +162,7 @@ Avro serialzier also support 2 modes:
 
 where ``Person`` is a avro generated class.
 
-** NOTE: you must register the schema class before use `avro` serialization format
+** NOTE: you must register the schema class before use `avro` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
 
 Write out binary
 ======================
