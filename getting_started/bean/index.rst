@@ -43,7 +43,7 @@ BElement
     is the top of all bean type.
 BValue
     wrap any value which is primitive: `Boolean`, `Character`, `String`, `Number` (byte, short, int, long, float, double, BigInteger, BigDecimal), `raw binary` (byte[]). Specially, BValue can convert any primitive type to any other.
-Container
+BContainer
     define any kind of BElement which can contain any other BElement.
 BObject
     define a key-value data structure
