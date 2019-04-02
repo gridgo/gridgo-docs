@@ -86,9 +86,11 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
 
     ProtobufSingleSchemaSerializer protobufSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(ProtobufSingleSchemaSerializer.NAME);
     protobufSerializer.setSchema(Person.class);
-    Person p = Person.newBuilder().setName("Bach Hoang Nguyen").setAge(30).build();
+    Person p = Person.newBuilder().setName("My Name").setAge(30).build();
+
     BElement ele = BElement.ofAny(p);
     byte[] bytes = ele.toBytes(ProtobufSingleSchemaSerializer.NAME);
+
     BElement unpackedEle = BElement.ofBytes(bytes, ProtobufSingleSchemaSerializer.NAME);
     Person p2 = unpackedEle.asReference().getReference();
 
@@ -99,9 +101,11 @@ Protobuf is a popularly serialization format. Gridgo-bean already support it by 
 
     ProtobufMultiSchemaSerializer protobufSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(ProtobufMultiSchemaSerializer.NAME);
     protobufSerializer.registerSchema(Person.class, 1);
-    Person p = Person.newBuilder().setName("Bach Hoang Nguyen").setAge(30).build();
+    Person p = Person.newBuilder().setName("My Name").setAge(30).build();
+
     BElement ele = BElement.ofAny(p);
     byte[] bytes = ele.toBytes(ProtobufMultiSchemaSerializer.NAME);
+
     BElement unpackedEle = BElement.ofBytes(bytes, ProtobufMultiSchemaSerializer.NAME);
     Person p2 = unpackedEle.asReference().getReference();
 
@@ -132,9 +136,8 @@ Avro serialzier also support 2 modes:
     AvroSingleSchemaSerializer avroSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(AvroSingleSchemaSerializer.NAME);
     avroSerializer.setSchema(Person.class);
 
-    Person p = Person.newBuilder().setName("Bach Hoang Nguyen").setAge(30).build();
+    Person p = Person.newBuilder().setName("My Name").setAge(30).build();
     byte[] bytes = BElement.ofAny(p).toBytes(AvroSingleSchemaSerializer.NAME);
-    System.out.println(ByteArrayUtils.toHex(bytes, "0x"));
 
     BElement unpackedEle = BElement.ofBytes(bytes, AvroSingleSchemaSerializer.NAME);
     Person p2 = unpackedEle.asReference().getReference();
@@ -147,9 +150,8 @@ Avro serialzier also support 2 modes:
     AvroMultiSchemaSerializer avroSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(AvroMultiSchemaSerializer.NAME);
     avroSerializer.registerSchema(Person.class, 1);
 
-    Person p = Person.newBuilder().setName("Bach Hoang Nguyen").setAge(30).build();
+    Person p = Person.newBuilder().setName("My Name").setAge(30).build();
     byte[] bytes = BElement.ofAny(p).toBytes(AvroMultiSchemaSerializer.NAME);
-    System.out.println(ByteArrayUtils.toHex(bytes, "0x"));
 
     BElement unpackedEle = BElement.ofBytes(bytes, AvroMultiSchemaSerializer.NAME);
     Person p2 = unpackedEle.asReference().getReference();
