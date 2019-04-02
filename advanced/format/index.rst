@@ -21,6 +21,12 @@ or
 
     BFactory.DEFAULT.getSerializerRegistry(<name>, <BSerializer instance>);
 
+Default binary serializer
+-------------------------
+Bean using a system property named ``gridgo.bean.serializer.binary.default`` to take default binary serializer name, if it's unset, ``msgpack`` will be used.
+
+Default serializer will be used in ``toBytes()``, ``writeBytes(...)`` and ``fromBytes(...)`` methods.
+
 Schema and schema-less format
 ----------------------------
 
