@@ -5,7 +5,7 @@ Bean Basics
 Beans are the abstract data structure of Gridgo aim to transparent data format and make easier to sending via network.
 Bean's structure is json-like, which support reference in additional.
 
-# hierachy
+# hierarchy
 ```
     BElement ------------------------------------------------------ AbstractBElement
         |                                                                  |
