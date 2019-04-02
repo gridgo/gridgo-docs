@@ -5,7 +5,19 @@ Overview
 --------
 
 Beans are the abstract data structure of Gridgo aim to transparent data format and make easier to sending via network.
+
 Bean's structure is json-like, which support reference in additional.
+
+To use bean in your project, just add maven dependency:
+
+.. code::
+
+    <dependency>
+        <groupId>io.gridgo</groupId>
+        <artifactId>gridgo-bean</artifactId>
+        <version>0.4.0</version>
+    </dependency>
+
 
 Hierarchy
 --------
