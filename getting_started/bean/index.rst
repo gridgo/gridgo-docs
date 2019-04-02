@@ -60,7 +60,7 @@ Mutable instances
 
 - ``BReference.of(data)``: create a mutable instance of BReference
 - ``BValue.of(data)``: create a mutable instance of BValue which wrap data as its source.
-- ``BObject.ofEmpty()``, BObject.of(Map<?,?>): create a mutable instance of BObject which is empty or auto convert map to a BObject
+- ``BObject.ofEmpty()``, ``BObject.of(Map<?,?>)``: create a mutable instance of BObject which is empty or auto convert map to a BObject
 - ``BArray.ofEmpty()``, ``BArray.of(collection or array)``: create a mutable instance of BArray which is empty or auto convert (collection | array) into a BArray
 
 in case you don't know which type of data want to convert to BElement, use: BElement.ofAny(data)
@@ -84,16 +84,3 @@ Built-in
 - Json: can be used by ``BElement.toJson()`` and ``BElement.fromJson(...)``
 - XML: can be used by ``BElement.toXml()`` and ``BElement.fromXml(...)``
 - Msgpack: canbe use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)``
-
-Pluggable
-~~~~~~~~~
-
-By design, every serialization format defined by a BSerializer`, include above build-in kinds.
-
-For example, by a global way you can use: ``BElement.fromBytes(bytes, "json")`` where "json" indicate the `BSerializer` instance named "json" will be used to deserialize bytes
-
-To write you own serializer, create a class which implements `BSerializer` and annotate it by ``@BSerializationPlugin(name)``. After create, register it with `BSerializerRegistry` by calling:
-
-.. code-block:: java
-
-    BFactory.DEFAULT.getSerializerRegistry().scan(<package_name>);
