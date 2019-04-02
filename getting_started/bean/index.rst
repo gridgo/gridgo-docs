@@ -94,6 +94,6 @@ For example, by a global way you can use: ``BElement.fromBytes(bytes, "json")`` 
 
 To write you own serializer, create a class which implements `BSerializer` and annotate it by ``@BSerializationPlugin(name)``. After create, register it with `BSerializerRegistry` by calling:
 
-.. code::java
+.. code-block:: java
 
     BFactory.DEFAULT.getSerializerRegistry().scan(<package_name>);
