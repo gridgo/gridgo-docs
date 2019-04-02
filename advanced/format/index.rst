@@ -132,9 +132,9 @@ First you need to register the schema once when you start the application. You n
     ProtobufMultiSchemaSerializer protobufSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(ProtobufMultiSchemaSerializer.NAME);
     protobufSerializer.registerSchema(Person.class, 1);
 
-.. code-block:: java
-
 Then you can start using it as normal:
+
+.. code-block:: java
 
     Person p = createPerson();
 
@@ -148,7 +148,7 @@ Then you can start using it as normal:
 
 ``Person`` is a protobuf generated class.
 
-.. note:: you must register the schema class before using `protobuf` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
+.. note:: you must register the schema class before using `protobuf` serialization format. Only `BReference` contains registered `schema` can be serialized/deserialized
 
 Avro
 ----
@@ -195,7 +195,7 @@ Avro serializier also support 2 modes:
 
 where ``Person`` is a avro generated class.
 
-.. note:: you must register the schema class before use `avro` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
+.. note:: you must register the schema class before use `avro` serialization format. Only `BReference` contains registered `schema` can be serialized/deserialized
 
 Write out binary
 ================
