@@ -25,7 +25,7 @@ or
 
 By default ``BFactory.DEFAULT.getSerializerRegistry()`` auto scan package ``io.gridgo.serialization``, so that if your custom serializer located in that package and loaded in the same class loader with BElement, you don't need to call register.
 
-** NOTE: your custom ``BSerializer`` must be thread-safe.
+.. note:: your custom ``BSerializer`` must be thread-safe.
 
 Default binary serializer
 =========================
@@ -115,7 +115,7 @@ Protobuf serializer support 2 modes:
 
 where ``Person`` is a protobuf generated class.
 
-** NOTE: you must register the schema class before use `protobuf` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
+.. note:: you must register the schema class before use `protobuf` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
 
 Avro
 ----
@@ -162,7 +162,7 @@ Avro serializier also support 2 modes:
 
 where ``Person`` is a avro generated class.
 
-** NOTE: you must register the schema class before use `avro` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
+.. note:: you must register the schema class before use `avro` serialization format. Only ``BReference`` contains registered `schema` can be serialized/deserialized
 
 Write out binary
 ======================
