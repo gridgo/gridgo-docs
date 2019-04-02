@@ -42,9 +42,9 @@ Pre-support serialization
 Gson
 ~~~~
 
-By default, `json` serializer using ```json-smart`` lib, but if you have your own reason to use ``gson``, you can do it by add maven dependency:
+By default, `json` serializer using ``json-smart`` lib, but if you have your own reason to use ``gson``, you can do it by add maven dependency:
 
-.. code-block::
+.. code::
 
     <dependency>
         <groupId>io.gridgo</groupId>
@@ -56,7 +56,7 @@ Protobuf
 ~~~~~~~~
 Protobuf is a popularly serialization format. Gridgo-bean already support it by a dependency:
 
-.. code-block::
+.. code::
 
     <dependency>
         <groupId>io.gridgo</groupId>
@@ -100,7 +100,7 @@ Avro
 
 Like protobuf, Avro also widely used serialization format. To use it, add below lines to your pom.xml:
 
-.. code-block::
+.. code::
 
     <dependency>
         <groupId>io.gridgo</groupId>
