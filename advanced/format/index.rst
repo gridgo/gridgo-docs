@@ -27,6 +27,8 @@ Schema and schema-less format
 Schema
 ~~~~~~
 There are a lot of binary serialization format which based on `schema` - generally understand as a value object.
+To serialize an object as in schema serialization format, object's type must be register with serializer.
+In case multi schema used in a single serializer, it should be prepended by a `type` header (commonly using 4 bytes integer);
 
 Schema-less
 ~~~~~~~~~~
