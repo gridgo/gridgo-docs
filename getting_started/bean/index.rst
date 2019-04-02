@@ -15,7 +15,7 @@ To use bean in your project, just add maven dependency:
     <dependency>
         <groupId>io.gridgo</groupId>
         <artifactId>gridgo-bean</artifactId>
-        <version>0.4.0</version>
+        <version>${gridgo.bean.version}</version>
     </dependency>
 
 
