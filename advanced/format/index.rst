@@ -1,3 +1,9 @@
+Thread-safe
+==========
+By default, all BElement created by default static methods ``of[...]()`` from BElement (and its sub-interfaces) always are not thread-safe.
+
+To create a BElement which is thread-safe, use BObject.withHolder(<holder_map>) or BArray.withHolder(<holder_list>). Where input value should be thread-safe.
+
 Pluggable serialization format
 =============================
 
