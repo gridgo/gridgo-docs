@@ -25,7 +25,7 @@ or
 
 By default ``BFactory.DEFAULT.getSerializerRegistry()`` auto scan package ``io.gridgo.serialization``, so that if your custom serializer located in that package and loaded in the same class loader with BElement, you don't need to call register.
 
-.. note:: your custom ``BSerializer`` must be thread-safe.
+.. note:: your custom `BSerializer` must be thread-safe.
 
 Default binary serializer
 =========================
@@ -41,10 +41,11 @@ You can, for example, change the default binary format to avro by providing the 
     -Dgridgo.bean.serializer.binary.default=avro
 
 Schema and schema-less
-=============================
+======================
 
 Schema
 ------
+
 There are a lot of binary serialization format which based on a `schema` - generally understood as a value object.
 
 To serialize an object with a schema serialization format, the object's type must be registered with the serializer.
@@ -59,6 +60,7 @@ There are 2 interfaces for `schema serialization`: ``io.gridgo.bean.serializatio
 
 Schema-less
 -----------
+
 `JSON`, `XML`, `msgpack` (all of the built-in formats) are schema-less, which mean they don't need a pre-defined schema class.
 
 Pre-support serialization
@@ -105,6 +107,8 @@ First you need to register the schema once when you start the application:
 
 Then you can start using it:
 
+.. code-block:: java
+
     // create a person instance
     Person p = createPerson();
     BElement ele = BElement.ofAny(p);
@@ -127,6 +131,8 @@ First you need to register the schema once when you start the application. You n
 
     ProtobufMultiSchemaSerializer protobufSerializer = BFactory.DEFAULT.getSerializerRegistry().lookup(ProtobufMultiSchemaSerializer.NAME);
     protobufSerializer.registerSchema(Person.class, 1);
+
+.. code-block:: java
 
 Then you can start using it as normal:
 
@@ -199,4 +205,4 @@ To work with I/O, data should be written to an output stream. There are 2 ways t
 1. convert to byte[] using ``BElement.toBytes()`` then append that bytes to output stream.
 2. write directly to output stream using ``BElement.writeBytes(outputStream)``.
 
-The second way is highly recommended because it save 1 times mem-copying and will make your code faster.
+The second way is highly recommended because it save one mem-copying and will make your code faster.
