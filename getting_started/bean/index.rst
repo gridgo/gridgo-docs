@@ -58,18 +58,18 @@ Using static methods define in top interface to create correlative instance:
 Mutable instances
 ~~~~~~~~~~~~~~~~~
 
-- BReference.of(data): create a mutable instance of BReference
-- BValue.of(data): create a mutable instance of BValue which wrap data as its source.
-- BObject.ofEmpty(), BObject.of(Map<?,?>): create a mutable instance of BObject which is empty or auto convert map to a BObject
-- BArray.ofEmpty(), BArray.of(collection or array): create a mutable instance of BArray which is empty or auto convert (collection | array) into a BArray
+- ``BReference.of(data)``: create a mutable instance of BReference
+- ``BValue.of(data)``: create a mutable instance of BValue which wrap data as its source.
+- ``BObject.ofEmpty()``, BObject.of(Map<?,?>): create a mutable instance of BObject which is empty or auto convert map to a BObject
+- ``BArray.ofEmpty()``, ``BArray.of(collection or array)``: create a mutable instance of BArray which is empty or auto convert (collection | array) into a BArray
 
 in case you don't know which type of data want to convert to BElement, use: BElement.ofAny(data)
 
 Immutable instances
 ~~~~~~~~~~~~~~~~~~~
 
-- BObject.wrap(map): wrap the input map in a WrappedImmutableBObject
-- BArray.wrap(collecion or array): wrap the input (collection or array) in a WrappedImmutableBArray
+- ``BObject.wrap(map)``: wrap the input map in a WrappedImmutableBObject
+- ``BArray.wrap(collecion or array)``: wrap the input (collection or array) in a WrappedImmutableBArray
 
 In case you don't know which kind of data which want to wrap, use: BElement.wrapAny(data)
 
@@ -81,14 +81,18 @@ BElement support multi kind of data serialization:
 Built-in
 ~~~~~~~~
 
-- Json: can be used by `BElement.toJson()` and `BElement.fromJson(...)`
-- XML: can be used by `BElement.toXml()` and `BElement.fromXml(...)`
-- Msgpack: canbe use by `BElement.toBytes()` and `BElement.fromBytes(...)`
+- Json: can be used by ``BElement.toJson()`` and ``BElement.fromJson(...)``
+- XML: can be used by ``BElement.toXml()`` and ``BElement.fromXml(...)``
+- Msgpack: canbe use by ``BElement.toBytes()`` and ``BElement.fromBytes(...)``
 
 Pluggable
 ~~~~~~~~~
 
 By design, every serialization format defined by a BSerializer, include above build-in kinds.
-For example, by a global way you can use: `BElement.fromBytes(bytes, "json")` where "json" indicate the BSerializer instance named "json" will be used to deserialize bytes
+
+For example, by a global way you can use: ``BElement.fromBytes(bytes, "json")`` where "json" indicate the BSerializer instance named "json" will be used to deserialize bytes
+
 To write you own serializer, create a class which implements BSerializer and annotate it by @BSerializationPlugin(name). After create, register it with BSerializerRegistry by call:
-`BFactory.DEFAULT.getSerializerRegistry().scan(<package_name>)`
+.. code::java
+
+    BFactory.DEFAULT.getSerializerRegistry().scan(<package_name>);
