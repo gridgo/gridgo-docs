@@ -7,7 +7,7 @@ To create a BElement which is thread-safe, use ``BObject.withHolder(<holder_map>
 Pluggable serialization
 =============================
 
-By design, every serialization format defined by a `BSerializer`, include all the build-in kinds.
+Every serialization format defined by a `BSerializer`, include all the build-in kinds.
 
 For example, by a global way you can use: ``BElement.fromBytes(bytes, "json")`` where "json" indicate the `BSerializer` instance named "json" will be used to deserialize bytes
 
@@ -21,7 +21,9 @@ or
 
 .. code-block:: java
 
-    BFactory.DEFAULT.getSerializerRegistry(<name>, <BSerializer instance>);
+    BFactory.DEFAULT.getSerializerRegistry.register(<name>, <BSerializer instance>);
+
+By default ``BFactory.DEFAULT.getSerializerRegistry()`` auto scan package ``io.gridgo.serialization``, so that if your custom serializer located in that package and loaded in the same class loader with BElement, you don't need to call register.
 
 Default binary serializer
 =========================
