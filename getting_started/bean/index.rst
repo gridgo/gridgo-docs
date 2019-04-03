@@ -82,7 +82,7 @@ Mutable instances
 - ``BObject.ofEmpty()``, ``BObject.of(Map<?,?>)``: create a mutable instance of BObject which is empty or auto convert map to a BObject
 - ``BArray.ofEmpty()``, ``BArray.of(collection or array)``: create a mutable instance of BArray which is empty or auto convert (collection | array) into a BArray
 
-in case you don't know which type of data want to convert to BElement, use: BElement.ofAny(data)
+in case you don't know which type of data want to convert to BElement, use: ``BElement.ofAny(data)``
 
 Immutable instances
 ~~~~~~~~~~~~~~~~~~~
@@ -100,6 +100,6 @@ BElement support multi kind of data serialization:
 Built-in
 ~~~~~~~~
 
-- Json: can be accessed by ``BElement.toJson()`` and ``BElement.fromJson(...)``
-- XML: can be accessed by ``BElement.toXml()`` and ``BElement.fromXml(...)``
-- Msgpack: can be accessed by ``BElement.toBytes()`` and ``BElement.fromBytes(...)`` (`msgpack` set as default binary serializer if the system property name `gridgo.bean.serializer.binary.default` is unset)
+- <b>JSON<b>: can be accessed by ``BElement.toJson()`` and ``BElement.fromJson(...)``
+- <b>XML</b>: can be accessed by ``BElement.toXml()`` and ``BElement.fromXml(...)``
+- <b>Msgpack</b>: can be accessed by ``BElement.toBytes()`` and ``BElement.fromBytes(...)`` (`msgpack` set as default binary serializer if the system property name `gridgo.bean.serializer.binary.default` is unset)
