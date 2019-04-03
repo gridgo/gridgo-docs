@@ -92,6 +92,11 @@ Immutable instances
 
 In case you don't know which kind of data which want to wrap, use: ``BElement.wrapAny(data)``
 
+Working with pojo
+~~~~~~~~~~~~~~~~~
+
+If you have a pojo object and want to convert it to BObject, you can use ``BObject.ofPojo()``.
+
 Serialization
 -------------
 
