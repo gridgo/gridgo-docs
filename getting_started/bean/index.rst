@@ -105,6 +105,9 @@ BElement support multi kind of data serialization:
 Built-in
 ~~~~~~~~
 
-- <b>JSON<b>: can be accessed by ``BElement.toJson()`` and ``BElement.fromJson(...)``
-- <b>XML</b>: can be accessed by ``BElement.toXml()`` and ``BElement.fromXml(...)``
-- <b>Msgpack</b>: can be accessed by ``BElement.toBytes()`` and ``BElement.fromBytes(...)`` (`msgpack` set as default binary serializer if the system property name `gridgo.bean.serializer.binary.default` is unset)
+- JSON
+    can be accessed by ``BElement.toJson()`` and ``BElement.fromJson(...)``
+- XML
+    can be accessed by ``BElement.toXml()`` and ``BElement.fromXml(...)``
+- Msgpack
+    can be accessed by ``BElement.toBytes()`` and ``BElement.fromBytes(...)`` (`msgpack` set as default binary serializer if the system property name `gridgo.bean.serializer.binary.default` is unset)
