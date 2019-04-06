@@ -8,7 +8,7 @@ Install
 
 To install Gridgo Boot with Maven:
 
-.. code:: maven
+.. code-block:: xml
 
     <dependency>
         <groupId>io.gridgo</groupId>
@@ -21,7 +21,7 @@ Getting started
  
 To start using Gridgo Boot, you need a Java main class.
 
-.. code:: java
+.. code-block:: xml
 
     @EnableComponentScan
     @Registries(defaultProfile = "local")
