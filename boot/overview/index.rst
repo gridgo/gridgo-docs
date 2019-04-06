@@ -10,11 +10,11 @@ To install Gridgo Boot with Maven:
 
 .. code:: maven
 
-   <dependency>
-			<groupId>io.gridgo</groupId>
-			<artifactId>gridgo-boot</artifactId>
-			<version>${gridgo.version}</version>
-		</dependency>
+    <dependency>
+        <groupId>io.gridgo</groupId>
+        <artifactId>gridgo-boot</artifactId>
+        <version>${gridgo.version}</version>
+    </dependency>
 
  Getting started
  ---------------
