@@ -37,6 +37,13 @@ The main documentation for the site is organized into the following sections:
 
    advanced/index
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Gridgo Boot
+   :name: sec-boot
+
+   boot/index
+
 
 .. toctree::
    :maxdepth: 1
