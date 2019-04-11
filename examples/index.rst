@@ -28,3 +28,9 @@ gridgo-example-tik-tac-toe
     some support gateway to handle game logic.
     
     Link: `<https://github.com/gridgo/gridgo-examples/tree/master/gridgo-example-tik-tac-toe>`_
+
+gridgo-example-kafka-consumer
+    This application will create a simple kafka producer and consumer to send and receive 
+    a message.
+
+    Link: `<https://github.com/gridgo/gridgo-examples/tree/master/gridgo-example-kafka-consumer>`_
