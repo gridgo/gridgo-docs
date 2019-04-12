@@ -27,3 +27,9 @@ gridgo-example-kafka-consumer
     a message.
 
     Link: `<https://github.com/gridgo/gridgo-examples/tree/master/gridgo-example-kafka-consumer>`_
+
+gridgo-example-gridgoboot
+    This application simulates a simple making an order flow at the restaurant, your order 
+    will be placed in a queue and then process asynchronously.
+
+    Link: `<https://github.com/gridgo/gridgo-examples/tree/master/gridgo-example-gridgoboot>`_
