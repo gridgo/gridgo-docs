@@ -5,7 +5,7 @@ Gridgo Boot supports a simple built-in DI mechanism. First you create a class an
 
 Examples:
 
-1. Inject a @Component class:
+1. Inject a `@Component` class:
 
 .. code-block:: java
 
@@ -33,7 +33,7 @@ Now inject Foo to other classes. Only classes annotated with @Component or @Gate
         private Foo foo;        
     }
 
-2. Inject a @Gateway producer class
+2. Inject a `@Gateway` producer class
 
 .. code-block:: java
 
