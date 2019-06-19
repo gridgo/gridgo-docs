@@ -1,10 +1,7 @@
 Gridgo Boot Documentation
 =========================
 
-Boot Overview
--------------
-
-This section will discuss about advanced topics when using Gridgo Bean
+Gridgo Boot aims at providing a more convenient convention when working with Gridgo, using annotation instead of configuration.
 
 .. toctree::
    :maxdepth: 1
