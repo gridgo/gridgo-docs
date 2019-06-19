@@ -21,7 +21,7 @@ Getting started
  
 To start using Gridgo Boot, you need a Java main class.
 
-.. code-block:: xml
+.. code-block:: java
 
     @EnableComponentScan
     @Registries(defaultProfile = "local")
