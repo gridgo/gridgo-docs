@@ -18,6 +18,20 @@ If you want to register custom beans into the registry, add a public static meth
 
 .. code-block:: java
 
+    @RegistryInitializer
     public static void initRegistry(Registry registry) {
         // Register your custom beans here
+        registry.register("someBean", new SomeBean());
     }
+
+
+If you want to add more registries, add a public static method with `@RegistryFactory` in the Main class:
+
+.. code-block:: java
+
+    @RegistryFactory
+    public static Registry createRegistry(Registry registry) {
+        return new MyRegistry();
+    }
+
+The added registries will take precedence over the default ones.
