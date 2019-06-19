@@ -47,7 +47,7 @@ Now inject the producer to another class. Only classes annotated with @Component
 .. code-block:: java
 
     @Gateway("bar_gateway")
-    @Connect("bar_connector)
+    @Connect("bar_connector")
     class SomeProducer implements Processor {
     
         @GatewayInject("foo_gateway")
