@@ -8,21 +8,6 @@ Gridgo Boot aims at providing a more convenient convention when working with Gri
    :name: sec-boot-overview
 
    overview/index
-
-.. toctree::
-   :maxdepth: 1
-   :name: sec-boot-initializer
-
    initializer/index
-
-.. toctree::
-   :maxdepth: 1
-   :name: sec-boot-di
-
    di/index
-
-.. toctree::
-   :maxdepth: 1
-   :name: sec-boot-data
-
    data/index
