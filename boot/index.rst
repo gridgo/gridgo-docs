@@ -11,3 +11,4 @@ Gridgo Boot aims at providing a more convenient convention when working with Gri
    initializer/index
    di/index
    data/index
+   tutorials/index
