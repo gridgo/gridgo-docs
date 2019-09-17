@@ -69,6 +69,8 @@ Now everything is setup, but Prometheus is pull-based, so you need to expose met
         }
     }
 
+When you run the application, it should be accessible by going to http://localhost:8080/metrics
+
 Visualize the metrics
 ---------------------
 
