@@ -77,4 +77,4 @@ Visualize the metrics
 Ask your administrator or infrastructure team to scrape it using the endpoint you have specified earlier. Then you can query it use something like:
 
 `rate(my_metrics_my_summary_time_count[30s])`: Return the average throughput of last 30 seconds
-`rate(my_metrics_my_summary_time_count[30s]) / rate(my_metrics_my_summary_time_sum[30s])`: Return the average latency of last 30 seconds
+`rate(my_metrics_my_summary_time_sum[30s]) / rate(my_metrics_my_summary_time_count[30s])`: Return the average latency of last 30 seconds
