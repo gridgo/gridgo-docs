@@ -14,18 +14,21 @@ Incoming sink
 
 This sink accepts events from various types of dispatcher, including *consumers*, *timers*, *producer* and *programmatically from handlers*.
 
-1. Consumers: Consumers read messages from a datasources (file, message queues, etc.) or accept messages from external system (e.g using a web server), then convert it to a `Message` and put into the Gateway's incoming sink.
+Consumers: 
+    Consumers read messages from a datasources (file, message queues, etc.) or accept messages from external system (e.g using a web server), then convert it to a `Message` and put into the Gateway's incoming sink. Consumer can sometimes be a timer which schedules messages to be generated and be put into the incoming sink. Each timer will accept a `Supplier<Message>`.
 
-2. Timers: Timers schedule messages to be generated and be put into the incoming sink. Each timer will accept a `Supplier<Message>`.
+Producers: 
+    Response from the producers can be put it into the incoming sink, making them available to be consumed by other handlers.
 
-3. Producers: Response from the producers can be put it into the incoming sink, making them available to be consumed by other handlers.
-
-4. Handlers: handlers can manually create the message and programmatically put it into the incoming sink.
+Handlers: 
+    Handlers can manually create the message and programmatically put it into the incoming sink.
 
 After a message is put into the incoming sink, it will be routed to different handlers based on the configured policies and rules. The corresponding handlers will then be executed with the following parameters:
 
-- `executionContext`: contains the `Message` to be consumed, the `DeferredObject` to be fulfilled and the caller (the gateway that this message comes from). Only the first call to resolve() or reject() will be considered, after that all subsequent calls are ignored.
-- `applicationContext`: contains all application-related information, including access to gateways, configurations, etc.
+`executionContext`:
+    contains the `Message` to be consumed, the `DeferredObject` to be fulfilled and the caller (the gateway that this message comes from). Only the first call to resolve() or reject() will be considered, after that all subsequent calls are ignored.
+`applicationContext`
+    contains all application-related information, including access to gateways, configurations, etc.
 
 Outgoing sink
 -------------
