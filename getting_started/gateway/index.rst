@@ -5,7 +5,7 @@ Gateway is a level of abstraction above Connector. It is the bridge between Conn
 
 The complete architecture of gateways is:
 
-.. image:: https://github.com/gridgo/gridgo/blob/master/design/gateway.png
+.. image:: https://github.com/gridgo/gridgo/raw/master/design/gateway.png
 
 Gateway comprises of Incoming Sink and Outgoing Sink:
 
